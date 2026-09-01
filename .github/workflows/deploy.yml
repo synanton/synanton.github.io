@@ -1,51 +1,24 @@
-name: Deploy MkDocs
-
+name: Deploy
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-
 jobs:
-  deploy:
+  build:
+    name: Deploy docs to GitHub Pages
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v4
+      - name: Checkout 
+        uses: actions/checkout@v2
+      - name: Build
+        uses: Tiryoh/actions-mkdocs@v0
         with:
-          python-version: '3.12'
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v2
-
-      - name: Create virtual environment and install dependencies
-        run: |
-          uv venv --python 3.12 --seed
-          source .venv/bin/activate
-          uv pip install -r requirements.txt
-
-      - name: Build MkDocs site
-        run: |
-          source .venv/bin/activate
-          mkdocs build
-
-      - name: Deploy to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: actions/upload-pages-artifact@v3
+          mkdocs_version: 'latest' # option
+          #mkdocs_version: '1.1' # option
+          requirements: 'requirements.txt' # option
+          configfile: 'mkdocs.yml' # option
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: 'site'
-
-      - name: Deploy artifact to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: actions/deploy-pages@v1
-
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
