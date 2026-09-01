@@ -1,51 +1,49 @@
-name: Deploy MkDocs
+name: Build and deploy MkDocs to GitHub Pages
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
+    outputs:
+      site-path: ${{ steps.build.outputs.site-path }}
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python 3.12
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: '3.x'
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v2
-
-      - name: Create virtual environment and install dependencies
+      - name: Install dependencies
         run: |
-          uv venv --python 3.12 --seed
-          source .venv/bin/activate
-          uv pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install mkdocs mkdocs-material; fi
 
       - name: Build MkDocs site
+        id: build
         run: |
-          source .venv/bin/activate
-          mkdocs build
+          mkdocs build --site-dir site
+          echo "::set-output name=site-path::site"
 
-      - name: Deploy to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          path: 'site'
+          path: site
 
-      - name: Deploy artifact to GitHub Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
 
