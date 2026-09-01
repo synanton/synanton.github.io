@@ -4,7 +4,7 @@ This section has two layers, for two different jobs.
 
 <div class="grid cards" markdown>
 
-- :material-book-open-variant: **Overviews**
+-  **Overviews**
 
     Long-form, conversational explainers — no code, no protobuf, no gRPC — for readers who want to
     understand *why* Synanton is built the way it is before going deeper.
@@ -13,7 +13,7 @@ This section has two layers, for two different jobs.
     [Security 101](overviews/security.md) · [Deployment 101](overviews/deployment.md) ·
     [Troubleshooting 101](overviews/troubleshooting.md)
 
-- :material-hammer-wrench: **How-to guides**
+-  **How-to guides**
 
     Short, task-oriented steps for developers and operators doing a specific job: creating a tag,
     configuring a classification, changing a rule, defining a metric.
@@ -27,11 +27,11 @@ This section has two layers, for two different jobs.
 
 ## Questions the Overviews answer
 
-- **How does Synanton protect sensitive data?** → [Security 101](overviews/security.md)
-- **Why are chunks important, and why not just split on token count?** → [Ingestion 101](overviews/ingestion.md)
-- **What happens when I search?** → [Search 101](overviews/search.md)
-- **How do I deploy this, and what changes between deployment modes?** → [Deployment 101](overviews/deployment.md)
-- **Something looks wrong — where do I even start?** → [Troubleshooting 101](overviews/troubleshooting.md)
+- **How does Synanton protect sensitive data?** → [Security](overviews/security.md)
+- **Why are chunks important, and why not just split on token count?** → [Ingestion](overviews/ingestion.md)
+- **What happens when I search?** → [Search](overviews/search.md)
+- **How do I deploy this, and what changes between deployment modes?** → [Deployment](overviews/deployment.md)
+- **Something looks wrong — where do I even start?** → [Troubleshooting](overviews/troubleshooting.md)
 
 ## What you won't find in the Overviews
 

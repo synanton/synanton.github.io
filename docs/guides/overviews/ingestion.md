@@ -10,7 +10,7 @@ A PDF or a Word document isn't text — it's a *rendering* of text, tables, head
 flowchart TD
     A[Raw bytes<br/>PDF, DOCX, HTML...] --> B[Structure extraction<br/>headings, tables, page layout]
     B --> C[Semantic chunking<br/>coherent, meaningful units]
-    C --> D[Classification & masking<br/>see Security 101]
+    C --> D[Classification & masking<br/>see Security]
     D --> E[Protected chunks]
     E --> F1[Reverse index]
     E --> F2[Vector store]
