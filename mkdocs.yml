@@ -1,0 +1,230 @@
+site_name: Synanton Documentation
+site_description: >-
+  Synanton transforms heterogeneous enterprise content into structured,
+  annotated, connected and measurable knowledge — architecture, concepts,
+  use cases, guides and reference.
+site_url: https://synanton.github.io/
+repo_url: https://github.com/synanton/synanton.github.io
+repo_name: synanton/synanton.github.io
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ru
+          name: Русский
+          build: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+
+extra:
+  social: []
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+      - Overview: getting-started/overview.md
+      - Quickstart: getting-started/quickstart.md
+      - How Data Flows Through Synanton: getting-started/architecture-overview.md
+
+  - Concepts:
+      - Synanton: concepts/synanton.md
+      - Content Model: concepts/content-model.md
+      - Extraction: concepts/extraction.md
+      - Semantic Elements: concepts/semantic-elements.md
+      - Semantic Chunking: concepts/semantic-chunking.md
+      - Chunks: concepts/chunks.md
+      - Chunk Security: concepts/chunk-security.md
+      - Annotations: concepts/annotations.md
+      - Annotation Types: concepts/annotation-types.md
+      - Annotation Dependencies: concepts/annotation-dependencies.md
+      - Taxonomy vs Dependency: concepts/taxonomy.md
+      - Provenance: concepts/provenance.md
+      - Knowledge Projections: concepts/knowledge-projections.md
+      - Search: concepts/search.md
+      - Security Classification: concepts/security-classification.md
+      - Masking: concepts/masking.md
+      - Security-Aware Search: concepts/security-aware-search.md
+      - Relationships: concepts/relationships.md
+      - Ontology: concepts/ontology.md
+      - Analytics: concepts/analytics.md
+      - Metrics: concepts/metrics.md
+      - Reporting: concepts/reporting.md
+      - Contracts: concepts/contracts.md
+
+  - Use Cases:
+      - Overview: use-cases/overview.md
+      - Multimodal Support: use-cases/multimodal-support.md
+      - Enterprise Document Search: use-cases/enterprise-document-search.md
+      - Conversation Intelligence: use-cases/conversation-intelligence.md
+      - Customer Support: use-cases/customer-support.md
+      - SRE & Production Support: use-cases/sre-production-support.md
+      - Multimodal Knowledge: use-cases/multimodal-knowledge.md
+      - Private / Regulated AI: use-cases/regulated-private-ai.md
+      - Analytics & Reporting: use-cases/analytics-and-reporting.md
+      - Custom Enterprise Applications: use-cases/custom-enterprise-applications.md
+
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Ingestion: architecture/ingestion.md
+      - Extraction Plane: architecture/extraction-plane.md
+      - Content Model: architecture/content-model.md
+      - Semantic Chunking: architecture/semantic-chunking.md
+      - Annotation Plane: architecture/annotation-plane.md
+      - Annotation Dependencies: architecture/annotation-dependencies.md
+      - Knowledge Projections: architecture/knowledge-projections.md
+      - Reverse Index: architecture/reverse-index.md
+      - Vector Store: architecture/vector-store.md
+      - Graph: architecture/graph.md
+      - Search Architecture: architecture/search-architecture.md
+      - Security: architecture/security.md
+      - Security-Aware Search: architecture/security-aware-search.md
+      - Masking: architecture/masking.md
+      - Recalculation: architecture/recalculation.md
+      - Resolutor: architecture/resolutor.md
+      - Equalix: architecture/equalix.md
+      - Analytics Plane: architecture/analytics-plane.md
+      - Analytics Events: architecture/analytics-events.md
+      - Analytical Facts: architecture/analytical-facts.md
+      - Metrics: architecture/metrics.md
+      - Reporting: architecture/reporting.md
+      - Analytics Security: architecture/analytics-security.md
+      - Analytics Lineage: architecture/analytics-lineage.md
+      - Analytics Recalculation: architecture/analytics-recalculation.md
+      - Analytics Storage: architecture/analytics-storage.md
+      - Polyglot Architecture: architecture/polyglot-architecture.md
+      - Contracts: architecture/contracts.md
+      - MCP: architecture/mcp.md
+      - Scaling: architecture/scaling.md
+
+  - Analytics:
+      - Overview: analytics/overview.md
+      - Concepts: analytics/concepts.md
+      - Events: analytics/events.md
+      - Facts: analytics/facts.md
+      - Aggregates: analytics/aggregates.md
+      - Metrics: analytics/metrics.md
+      - Reports: analytics/reports.md
+      - Dashboards: analytics/dashboards.md
+      - Freshness: analytics/freshness.md
+      - Retention: analytics/retention.md
+      - Security: analytics/security.md
+      - Lineage: analytics/lineage.md
+      - Recalculation: analytics/recalculation.md
+      - Storage: analytics/storage.md
+      - Operations: analytics/operations.md
+
+  - Guides:
+      - Overview: guides/index.md
+      - Overviews:
+          - Search: guides/overviews/search.md
+          - Ingestion: guides/overviews/ingestion.md
+          - Security: guides/overviews/security.md
+          - Deployment: guides/overviews/deployment.md
+          - Troubleshooting: guides/overviews/troubleshooting.md
+      - Ingestion: guides/ingestion/index.md
+      - Extraction: guides/extraction/index.md
+      - Chunking: guides/chunking/index.md
+      - Annotations: guides/annotations/index.md
+      - Security: guides/security/index.md
+      - Search: guides/search/index.md
+      - Recalculation: guides/recalculation/index.md
+      - Analytics: guides/analytics/index.md
+      - Integrations: guides/integrations/index.md
+      - Operations: guides/operations/index.md
+
+  - Integrations:
+      - Content Extractor: integrations/content-extractor.md
+      - MCP: integrations/mcp.md
+      - LLM Providers: integrations/llm-providers.md
+      - Object Storage: integrations/object-storage.md
+      - Search Engines: integrations/search-engines.md
+      - Vector Databases: integrations/vector-databases.md
+      - Graph Databases: integrations/graph-databases.md
+      - Analytics Storage: integrations/analytics-storage.md
+
+  - Operations:
+      - Deployment: operations/deployment.md
+      - On-Premises: operations/on-premises.md
+      - Private LLM: operations/private-llm.md
+      - Scaling: operations/scaling.md
+      - Monitoring: operations/monitoring.md
+      - Storage: operations/storage.md
+      - Analytics: operations/analytics.md
+      - Recalculation: operations/recalculation.md
+      - Troubleshooting: operations/troubleshooting.md
+
+  - Reference:
+      - Content Schema: reference/content-schema.md
+      - Semantic Element Schema: reference/semantic-element-schema.md
+      - Chunk Schema: reference/chunk-schema.md
+      - Annotation Schema: reference/annotation-schema.md
+      - Security Policy Schema: reference/security-policy-schema.md
+      - Analytics Event Schema: reference/analytics-event-schema.md
+      - Analytical Fact Schema: reference/analytical-fact-schema.md
+      - Metric Schema: reference/metric-schema.md
+      - Report Schema: reference/report-schema.md
+      - Search API: reference/search-api.md
+      - Annotation API: reference/annotation-api.md
+      - Analytics API: reference/analytics-api.md
+      - Configuration: reference/configuration.md
+
+  - Design:
+      - Overview: design/index.md
+      - Design 1.25 (current, architecture): design/synanton-design-1.25.md
+      - Design 1.23 (in progress): design/synanton-design-1.23.md
+      - Design 1.22 (baseline): design/synanton-design-1.22.md
+      - Design 1.21 (extraction plane): design/synanton-design-1.21.md
+      - Design 1.20 (GPU execution plane): design/synanton-design-1.20.md
+      - Design 1.19 (superseded baseline): design/synanton-design-1.19.md

@@ -1,0 +1,12 @@
+# MCP
+
+!!! info "Content pending"
+    This page is part of the site's full navigation skeleton. Full content is scheduled per
+    the documentation plan's **§58 / §51, Phase 4** and will follow the standard architecture page
+    template (What it is / Why it exists / How it works / Example / Inputs / Outputs /
+    Dependencies / Change and recalculation / Security / Lineage / Related concepts).
+
+MCP as an integration/access interface exposing knowledge search, annotation inspection, provenance and analytics capabilities -- never a replacement for internal contracts.
+
+See the [Synanton Documentation Site Plan](https://github.com/synanton/synanton.github.io/blob/main/doc/Synanton%20Documentation%20Site%20Plan.md)
+for the full outline this page will follow.

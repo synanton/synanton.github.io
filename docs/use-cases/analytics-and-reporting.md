@@ -1,0 +1,12 @@
+# Analytics & Reporting
+
+!!! info "Content pending"
+    This page is part of the site's full navigation skeleton. Full content is scheduled per
+    the documentation plan's **§59 / Phase 4** and will follow the standard architecture page
+    template (What it is / Why it exists / How it works / Example / Inputs / Outputs /
+    Dependencies / Change and recalculation / Security / Lineage / Related concepts).
+
+How the Analytics Plane turns platform activity and knowledge state into metrics and reports without becoming the source of truth.
+
+See the [Synanton Documentation Site Plan](https://github.com/synanton/synanton.github.io/blob/main/doc/Synanton%20Documentation%20Site%20Plan.md)
+for the full outline this page will follow.
