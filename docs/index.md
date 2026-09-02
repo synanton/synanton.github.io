@@ -38,22 +38,22 @@ The central architectural promise:
 
 <div class="grid cards" markdown>
 
-- :material-compass-outline: **New to Synanton?**
+- **New to Synanton?**
 
     Start with the [Getting Started overview](getting-started/overview.md), then walk through
     [how data flows through Synanton](getting-started/architecture-overview.md) end to end.
 
-- :material-lightbulb-on-outline: **Want the architectural story?**
+- **Want the architectural story?**
 
     [Concepts](concepts/synanton.md) explains what Synanton is without implementation detail —
     content model, chunks, annotations, security, search, recalculation.
 
-- :material-office-building-outline: **Evaluating for a specific scenario?**
+- **Evaluating for a specific scenario?**
 
     [Use Cases](use-cases/overview.md) shows the same primitives applied to document search,
     conversation intelligence, customer support and more.
 
-- :material-file-tree-outline: **Building or operating the platform?**
+- **Building or operating the platform?**
 
     [Architecture](architecture/overview.md) and [Guides](guides/index.md) go deep on how each
     plane works, what changes it, and how it's secured and recalculated.

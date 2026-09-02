@@ -21,7 +21,7 @@ requirement.
 
 | Version | Status | Covers |
 |---|---|---|
-| [1.25](synanton-design-1.25.md) | Approved (architecture) | Annotations, derived knowledge, recalculation, analytics & reporting plane (consolidates 1.24) |
+| [1.25](synanton-design-1.25.md) | Approved (architecture), consolidates 1.24 | Annotations, derived knowledge, recalculation, analytics & reporting plane |
 | [1.23](synanton-design-1.23.md) | Approved | Classification-aware semantic search |
 | [1.22](synanton-design-1.22.md) | Current baseline | Semantic content structuring / chunking |
 | [1.21](synanton-design-1.21.md) | Folded into 1.22 | Structured Content Extraction Plane (Part IX) |
