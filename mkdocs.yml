@@ -80,6 +80,7 @@ nav:
 
   - Concepts:
       - Synanton: concepts/synanton.md
+      - Materialized Projections: concepts/materialized-projections.md
       - Content Model: concepts/content-model.md
       - Extraction: concepts/extraction.md
       - Semantic Elements: concepts/semantic-elements.md
